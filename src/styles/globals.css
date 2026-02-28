@@ -1,3 +1,55 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Code block styles */
+.code-block-wrapper {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 1rem 0;
+  border: 1px solid #2d2d2d;
+}
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2d2d2d;
+  padding: 0.4rem 1rem;
+}
+
+.code-block-lang {
+  font-size: 0.7rem;
+  font-family: monospace;
+  text-transform: uppercase;
+  color: #9ca3af;
+  letter-spacing: 0.05em;
+}
+
+.code-block-copy {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  transition:
+    color 0.15s,
+    background-color 0.15s;
+}
+
+.code-block-copy:hover {
+  color: #ffffff;
+  background-color: #3d3d3d;
+}
+
+.code-block {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: "Cascadia Code", "Fira Code", "Consolas", monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre;
+}
