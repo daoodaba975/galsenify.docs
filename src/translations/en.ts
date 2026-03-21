@@ -1,0 +1,165 @@
+import type { Translations } from "./fr";
+
+export const en: Translations = {
+  nav: {
+    docs: "Documentation",
+    examples: "Examples",
+  },
+  sidebar: {
+    header: "Documentation",
+    pays: "Country",
+    regions: "Regions",
+    departments: "Departments",
+    telecom: "Telecom",
+    search: "Search",
+    calculs: "Calculations",
+    tri: "Sort & Filters",
+  },
+  footer: {
+    copyright: "Galsenify v1.2.0 - MIT License",
+  },
+  codeBlock: {
+    copy: "Copy",
+    copied: "Copied!",
+  },
+  home: {
+    badgeNew: "New",
+    badgeAvailable: "available on NPM",
+    taglinePre: "A comprehensive library for Senegalese data.",
+    ctaDocs: "Read the documentation",
+    ctaExamples: "View examples",
+    statsRegions: "Regions",
+    statsDepts: "Departments",
+    statsOps: "Operators",
+    installTitle: "Installation",
+    quickstartTitle: "Quick start",
+    exploreTitle: "Explore the documentation",
+    cardDesc: {
+      pays: "2 methods - Senegal data and national languages",
+      regions: "6 methods - list, codes, population, area",
+      departments: "4 methods - list, subdivisions, stats",
+      telecom: "4 methods - operators, search by prefix/number",
+      search: "2 methods - text search and by code",
+      calculs: "5 methods - total population, density, area",
+      tri: "7 methods - sort, filters, random",
+    },
+  },
+  examples: {
+    title: "Interactive examples",
+    intro: "Test galsenify methods directly in the browser.",
+    liveDemo: "Live demo",
+    table: {
+      title: "Regions table",
+      desc: "Displays all regions with their data via galsenify.rg()",
+      headers: ["Region", "Code", "Population", "Area (km²)"],
+    },
+    select: {
+      title: "Dropdown list",
+      desc: "Select a region to see its population and area",
+      labelPop: "Population",
+      labelArea: "Area",
+    },
+    radio: {
+      title: "Departments by region",
+      desc: "Choose a region and see its departments",
+      depsOf: "Departments of",
+    },
+    search: {
+      title: "Search",
+      desc: "Real-time search across geographic data",
+      placeholder: "Search a region or department...",
+      noResult: "No results for",
+    },
+    telecom: {
+      title: "Operator identification",
+      desc: "Identify the operator of a Senegalese phone number",
+      placeholder: "e.g. 771234567",
+      btn: "Identify",
+      operateur: "Operator",
+      notFound: "No operator found for this number.",
+    },
+    random: {
+      title: "Random region",
+      desc: "Pick a region at random with galsenify.randomRegion()",
+      btn: "Pick a random region",
+      labelRegion: "Region",
+      labelCode: "Code",
+      labelPop: "Population",
+      labelArea: "Area",
+    },
+  },
+  docs: {
+    regions: {
+      title: "Regions",
+      intro: "6 methods to access data from Senegal's 14 regions.",
+      methods: [
+        "Returns an array of all Region objects with their complete properties (name, code, population, area, departments).",
+        "Returns an array of names of all regions in Senegal.",
+        "Returns an array of official codes for all regions.",
+        "Returns the list of departments in a given region.",
+        "Returns the population of a given region.",
+        "Returns the area (in km²) of a given region.",
+      ],
+    },
+    departments: {
+      title: "Departments",
+      intro: "4 methods to access data from Senegal's 46 departments.",
+      methods: [
+        "Returns an array of all departments in Senegal (46 departments).",
+        "Returns the list of subdivisions (arrondissements) for a given department.",
+        "Returns the population of a given department.",
+        "Returns the area (in km²) of a given department.",
+      ],
+    },
+    pays: {
+      title: "Country",
+      intro: "2 methods to access general data about Senegal.",
+      methods: [
+        "Returns the complete object representing Senegal with all its metadata.",
+        "Returns an array of national languages recognized in Senegal.",
+      ],
+    },
+    telecom: {
+      title: "Telecom",
+      intro: "4 methods to access data about Senegal's telecom operators.",
+      methods: [
+        "Returns the complete list of telecom operators in Senegal (objects with name, type, prefixes).",
+        "Returns only mobile operators (filters out fixed operators).",
+        "Finds the operator matching a given prefix (2 digits).",
+        "Identifies the operator of a complete Senegalese phone number.",
+      ],
+    },
+    search: {
+      title: "Search",
+      intro: "2 methods to search across geographic data from Senegal.",
+      methods: [
+        "Searches the data (regions and departments) using a string. Returns a SearchResult array with type, nom, and data fields. Case-insensitive.",
+        "Finds a region by its official two-letter code (case-insensitive).",
+      ],
+    },
+    calculs: {
+      title: "Calculations",
+      intro: "5 methods to compute demographic statistics.",
+      methods: [
+        "Returns the total population of Senegal (sum of all regions).",
+        "Returns the total area of Senegal in km² (sum of all regions).",
+        "Calculates the population density (inhabitants/km²) for a given region.",
+        "Calculates the population density (inhabitants/km²) for a given department.",
+        "Calculates the national density of Senegal (total population / total area).",
+      ],
+    },
+    tri: {
+      title: "Sort & Filters",
+      intro: "7 methods to sort, filter and randomly select data.",
+      methods: [
+        "Returns regions sorted by population. Defaults to descending ('desc').",
+        "Returns regions sorted by area. Defaults to descending ('desc').",
+        "Returns regions sorted by population density. Defaults to descending ('desc').",
+        "Returns departments sorted by population.",
+        "Returns the complete department objects for a region identified by its code.",
+        "Returns a Region object chosen at random from the 14 regions.",
+        "Returns a department chosen at random from the 46 departments.",
+      ],
+    },
+  },
+};
