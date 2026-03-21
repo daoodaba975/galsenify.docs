@@ -30,7 +30,7 @@ npm run dev
 
 Ouvrir [http://localhost:3000](http://localhost:3000) dans le navigateur.
 
-## Build
+## Compilation
 
 ```bash
 npm run build

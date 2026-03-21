@@ -16,6 +16,10 @@ export const fr = {
   footer: {
     copyright: "Galsenify v1.2.0 - MIT Licence",
   },
+  codeBlock: {
+    copy: "Copier",
+    copied: "Copié !",
+  },
   home: {
     badgeNew: "Nouveau",
     badgeAvailable: "disponible sur NPM",

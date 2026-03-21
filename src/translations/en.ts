@@ -18,6 +18,10 @@ export const en: Translations = {
   footer: {
     copyright: "Galsenify v1.2.0 - MIT License",
   },
+  codeBlock: {
+    copy: "Copy",
+    copied: "Copied!",
+  },
   home: {
     badgeNew: "New",
     badgeAvailable: "available on NPM",

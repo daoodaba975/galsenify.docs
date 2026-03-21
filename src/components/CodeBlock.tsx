@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface CodeBlockProps {
   code: string;
@@ -275,13 +276,21 @@ function tokenize(code: string, language: string): Token[] {
 
 export default function CodeBlock({ code, language = "js" }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
+  const { t } = useLanguage();
   const tokens = tokenize(code, language);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(code).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(code).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }).catch((err) => {
+        console.error("Failed to copy code:", err);
+        setCopied(false);
+      });
+    } else {
+      console.error("Clipboard API is not available");
+    }
   };
 
   return (
@@ -289,7 +298,7 @@ export default function CodeBlock({ code, language = "js" }: CodeBlockProps) {
       <div className="code-block-header">
         <span className="code-block-lang">{language}</span>
         <button onClick={handleCopy} className="code-block-copy">
-          {copied ? "Copié !" : "Copier"}
+          {copied ? t.codeBlock.copied : t.codeBlock.copy}
         </button>
       </div>
       <pre className="code-block">
